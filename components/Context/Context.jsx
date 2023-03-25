@@ -18,7 +18,7 @@ const DataProvider = ({ children }) => {
         color: colorData,
         emoji: emojiPickerData,
         input: inputData,
-        id: crypto.randomUUID(),
+        id: self.crypto.randomUUID(),
     }
 
     useEffect(() => {
