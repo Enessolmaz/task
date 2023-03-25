@@ -1,0 +1,70 @@
+.aside {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  border-right: 1px solid #212429;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  font-size: 700;
+  border-bottom: 1px solid #212429;
+  padding: 12px;
+}
+
+.thirteen {
+  filter: drop-shadow(0 0 5px #f2f5f7);
+  letter-spacing: 1px;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.Items {
+  margin: 6px;
+}
+
+.buttonUI {
+  cursor: pointer;
+  display: flex;
+  padding: 8px 12px;
+  border-radius: 50%;
+  align-items: center;
+  background-color: transparent;
+  color: #7c859e;
+  font-weight: 500;
+  font-size: 18px;
+  border: none;
+  transition: 300ms all;
+}
+
+.buttonUI .buttonLogo {
+  display: flex;
+  align-items: center;
+  fill: beige;
+}
+
+.buttonUI:hover {
+  background-color: #212429;
+}
+.buttonUI:hover .buttonLogo {
+  color: rgba(255, 255, 255, 0.781);
+}
+
+
+/* .buttonUI:hover .buttonName {
+  color: rgba(255, 255, 255, 0.808);
+}
+.buttonUI .buttonName {
+  padding-left: 15px;
+} */

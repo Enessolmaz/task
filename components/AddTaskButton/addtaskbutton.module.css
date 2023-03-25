@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+
+.contentPopUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-family: "Inter";
+}
+
+.popUpDialog {
+  display: flex;
+  flex-direction: column;
+  padding: 0 35px;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 32px;
+}
+
+.contentPopUp > h3 {
+  color: rgb(189, 189, 189);
+}
+
+.EmojiButton {
+  border: 1px dashed rgb(68, 68, 68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 200ms;
+  position: relative;
+  background-color: inherit;
+}
+.EmojiButton:hover {
+  border: 1px dashed rgb(95, 95, 95);
+}
+
+.spanTrash {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  border-radius: 8px;
+  transition: 100ms ease-in-out;
+  color: #44474d;
+}
+
+.spanTrash:hover {
+  background-color: #44474d;
+  color: #c9cdd4;
+}
+
+.EmojiIcon {
+  transition: 200ms ease-in-out;
+}
+
+.EmojiButton:hover .EmojiIcon {
+  transition: 200ms ease-in-out;
+  fill: rgb(255, 255, 255);
+}
+
+.popUpInput {
+  display: flex;
+  flex-direction: column;
+  color: #696c72;
+  letter-spacing: 1.25px;
+  gap: 5px;
+  position: relative;
+  text-align: start;
+}
+
+.popUpInput > input {
+  background-color: transparent;
+  border: 1px solid #44474d;
+  border-radius: 12px;
+  outline: none;
+  padding: 12px 25px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.25px;
+  position: relative;
+  font-family: "Inter";
+}
+
+.popUpInput > input:focus {
+  border: 1px solid #5c635b;
+}
+
+.popUpInput > span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 10px;
+  bottom: 13px;
+  border: none;
+  height: max-content;
+}
+
+.colorPickerDiv {
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  color: #696c72;
+  display: flex;
+  flex-direction: column;
+}
+
+.colors {
+  display: flex;
+  gap: 6px;
+}
+.imageColor {
+  margin-top: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dialogAddButton {
+  padding: 10px 14px;
+  width: 100%;
+  color: white;
+  font-weight: 400;
+  font-family: "Inter";
+  font-size: 18px;
+  transition: 300ms;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.dialogAddButton:hover {
+  transform: scale(1.1);
+}
+
+.mainCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  align-items: center;
+  height: fit-content;
+  padding: 10px;
+  width: 100%;
+  border-radius: 0px 6px 6px 0px !important;
+  cursor: pointer;
+  transition: 200ms;
+  position: relative;
+}
+.card:hover {
+  background-color: #212429;
+}
+
+.EmojiTodoButton {
+  background-color: #212429;
+  border: 1px dashed rgb(68, 68, 68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  width: 75px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 200ms;
+  position: relative;
+}
+
+.todoInfo {
+  display: grid;
+  gap: 15px;
+}
+.todoInfo span {
+  font-family: "Inter";
+  font-size: 12px;
+  margin: 0 5px;
+  padding: 3px 12px;
+  border-radius: 12px;
+}
+
+.deleteICON {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  transition: 200ms;
+}
+
+.deleteICON:hover {
+  background: #212429;
+}
+.deleteICON:hover svg {
+  fill: #ff6b8b;
+}

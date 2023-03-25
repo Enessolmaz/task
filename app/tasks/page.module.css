@@ -1,0 +1,58 @@
+.tasksTab {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.addTaskButton {
+  background-color: rgba(19, 62, 143, 0.61) !important;
+  border: none !important;
+  font-size: 14px !important;
+  text-transform: unset !important;
+  display: flex !important;
+  align-items: center !important;
+  border-radius: 18px !important;
+  height: max-content !important;
+  width: max-content !important;
+  font-family: "Inter" !important;
+  transition: 300ms ease;
+  color: white;
+}
+
+.addTaskButton:hover {
+  background-color: rgba(7, 76, 145, 0.6) !important;
+  transition: 300ms ease;
+  border: none !important;
+}
+
+.borderButton {
+  display: flex;
+  justify-content: center;
+  max-width: 140px;
+  background-color: #1e293b;
+  height: 90%;
+  border-radius: 14px;
+  padding: 14px;
+  margin: 25px 0 0 5px;
+}
+
+.contentMain {
+  margin: 25px 10px 0px 5px;
+  padding: 18px 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 100%;
+  flex: 1;
+  gap: 15px;
+  border-radius: 8px;
+}
+
+.card {
+  width: 100%;
+  height: 80px;
+  color: black;
+  background-color: red;
+  display: flex;
+}
