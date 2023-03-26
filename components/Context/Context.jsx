@@ -11,6 +11,7 @@ const DataProvider = ({ children }) => {
     const [emojiPickerData, setEmojiPickerData] = useState(null);
     const [inputData, setInputData] = useState("");
     const [allDATA, setAllDATA] = useState([]);
+    const [getURL, setGetURL] = useState("");
     const parent = useRef(null)
 
     const objectAllData =
@@ -35,7 +36,9 @@ const DataProvider = ({ children }) => {
         setEmojiPickerData,
         objectAllData,
         allDATA,
-        setAllDATA
+        setAllDATA,
+        setGetURL,
+        getURL
     }
 
 

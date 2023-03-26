@@ -8,13 +8,13 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import styles from "../../app/tasks/page.module.css";
 import style from "./addtaskbutton.module.css"
-import "./style.css"
 import { BsFillCameraFill, BsFillTrashFill } from "react-icons/bs"
 import Picker from '@emoji-mart/react'
 import data from '@emoji-mart/data'
 import PopUpInput from "./PopUpInput";
 import ColorPicker from "./ColorPicker";
 import { DataContext } from "../Context/Context";
+// import "./styling.css"
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     "& .MuiDialogContent-root": {

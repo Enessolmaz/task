@@ -4,12 +4,12 @@ import { MdDisplaySettings } from "react-icons/md";
 
 const menuItems = [
   {
-
+    name: "Home",
     logo: <AiOutlineHome size={18} />,
     url: "/",
   },
   {
-
+    name: "Tasks",
     logo: <FaTasks size={18} />,
     url: "/tasks",
   },

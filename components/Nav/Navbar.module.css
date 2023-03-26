@@ -1,11 +1,12 @@
 .navbar {
   background-color: transparent;
   width: 100%;
-  height: 50px;
-  border-bottom: 1px solid #212429;
+  height: 75px;
+  border-bottom: 1px solid #1d2e3f;
   display: flex;
   align-items: center;
   position: relative;
+  padding: 0px 50px;
 }
 
 .navbarRight {
@@ -13,8 +14,8 @@
   align-items: center;
   justify-content: space-evenly;
   margin-left: auto;
-  background: #212429;
-  padding: 4px 12px;
+  background: #56b89020;
+  padding: 6px 12px;
   margin-right: 5px;
   border-radius: 12px;
   cursor: pointer;

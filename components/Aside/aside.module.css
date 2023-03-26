@@ -1,22 +1,26 @@
 .aside {
-  width: 80px;
+  width: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  border-right: 1px solid #212429;
+  border-right: 1px solid #1d2e3f;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 75px;
   width: 100%;
   position: relative;
   font-size: 700;
-  border-bottom: 1px solid #212429;
   padding: 12px;
+}
+
+.active {
+  background-color: #56b89020 !important;
+  color: white !important;
 }
 
 .thirteen {
@@ -37,15 +41,16 @@
 .buttonUI {
   cursor: pointer;
   display: flex;
+  align-items: center;
   padding: 8px 12px;
-  border-radius: 50%;
+  border-radius: 6px;
   align-items: center;
   background-color: transparent;
   color: #7c859e;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   border: none;
-  transition: 300ms all;
+  transition: 150ms ease-in;
 }
 
 .buttonUI .buttonLogo {
@@ -54,13 +59,20 @@
   fill: beige;
 }
 
-.buttonUI:hover {
-  background-color: #212429;
-}
-.buttonUI:hover .buttonLogo {
-  color: rgba(255, 255, 255, 0.781);
+.buttonName {
+  padding: 4px 6px;
 }
 
+.buttonUI:hover .buttonName {
+  color: #ffffffc7;
+}
+
+.buttonUI:hover {
+  background-color: #56b89020;
+}
+.buttonUI:hover .buttonLogo {
+  color: #ffffffc7;
+}
 
 /* .buttonUI:hover .buttonName {
   color: rgba(255, 255, 255, 0.808);
