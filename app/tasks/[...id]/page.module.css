@@ -52,3 +52,15 @@
 .EmojiButton:hover {
   border: 1px dashed rgb(95, 95, 95);
 }
+
+.css-uhb5lp {
+  background: #f6f8fc !important;
+  width: 400px !important;
+  min-height: 400px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 35px !important;
+  justify-content: space-evenly !important;
+  text-align: center !important;
+  border-radius: 32px !important;
+}

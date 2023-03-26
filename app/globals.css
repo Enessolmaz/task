@@ -26,7 +26,6 @@ a {
   flex-direction: column;
   width: 100%;
   flex: 1;
-  z-index: 15;
 }
 
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
@@ -39,4 +38,12 @@ a {
   justify-content: space-evenly !important;
   text-align: center !important;
   border-radius: 32px !important;
+}
+
+.css-uhb5lp {
+  background: #212429 !important;
+}
+
+.css-1ujsas3 {
+  color: #fff;
 }
