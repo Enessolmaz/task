@@ -12,10 +12,10 @@
   display: flex !important;
   align-items: center !important;
   border-radius: 8px !important;
-  height: max-content;  
+  height: max-content;
   font-family: "Inter" !important;
   transition: 200ms ease;
-  color: white;
+  color: white !important;
 }
 
 .addTaskButton:hover {
@@ -47,4 +47,3 @@
   gap: 15px;
   border-radius: 8px;
 }
-

@@ -14,7 +14,8 @@ import data from '@emoji-mart/data'
 import PopUpInput from "./PopUpInput";
 import ColorPicker from "./ColorPicker";
 import { DataContext } from "../Context/Context";
-// import "./styling.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     "& .MuiDialogContent-root": {
@@ -53,8 +54,11 @@ function BootstrapDialogTitle(props) {
 const AddTaskButton = () => {
     const [isPickerVisible, setPickerVisible] = useState(false)
     const [currentEmoji, setCurrentEmoji] = useState(null)
-
     const [open, setOpen] = useState(false);
+    const notify = (description) => toast.error(description);
+    const successNotify = (description) => toast.success(description);
+
+
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -71,15 +75,17 @@ const AddTaskButton = () => {
     const handleClose = () => {
 
         if (!inputData.trim()) {
-            alert("input boş olamaz")
+            notify("İsim Boş Olamaz")
         }
         else {
             setAllDATA([...allDATA, objectAllData])
             setEmojiPickerData(null)
             setCurrentEmoji(null)
             setInputData("")
+            successNotify("Başarıyla Oluşturuldu")
             setOpen(false);
         }
+        setOpen(false);
     };
 
     const closeDialog = () => {
@@ -88,6 +94,20 @@ const AddTaskButton = () => {
 
     return (
         <>
+
+            <ToastContainer
+                position="top-center"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
+
             <Button className={styles.addTaskButton} onClick={handleClickOpen}>
                 Yeni Dosya
             </Button>
@@ -106,7 +126,7 @@ const AddTaskButton = () => {
                                     <>
                                         <h1 style={{ fontSize: 32 }}>{currentEmoji}</h1>
                                         {
-                                            <span className={style.spanTrash} onClick={spanTrashClicker}>
+                                            <span className={style.spanTrash} disabled onClick={spanTrashClicker}>
                                                 <BsFillTrashFill size={20} />
                                             </span>
                                         }

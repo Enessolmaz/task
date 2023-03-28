@@ -1,102 +1,62 @@
 "use client"
 import { DataContext } from '@/components/Context/Context'
-import React, { useContext, useEffect } from 'react'
-import image1 from "./images/wp1.jpg"
-import image2 from "./images/wp2.jpg"
-import image3 from "./images/wp3.jpg"
+import React, { useContext, useEffect, useState } from 'react'
+
 import styled from "./page.module.css"
-import { BsFillCameraFill, BsFillTrashFill } from "react-icons/bs"
+
 
 const page = ({ params }) => {
 
-
-    const { allDATA, setAllDATA } = useContext(DataContext)
-
-
+    const { allDATA, completed, setCompleted, setCheckingDATA } = useContext(DataContext)
+    const [textAreaData, setTextAreaData] = useState("");
 
 
-    const backgroundIMAGES = [
-        {
-            image: image1.src
-        },
-        {
-            image: image2.src
-        },
-        {
-            image: image3.src
-        },
-
-    ]
+    const params_id = params.id.toString()
+    const mapData = allDATA.filter((item) => item.id.toString() === params_id)
 
 
-
-    const randomImage = backgroundIMAGES[Math.floor(Math.random() * backgroundIMAGES.length)]
-
-    console.log(allDATA)
 
     return (
-
-        <div className={styled.wallpaperContent}>
-
-            <div className={styled.imageCollapse}>
-                <img className={styled.image} src={randomImage.image} alt="" />
-                <button className={styled.EmojiButton}>
-                    {
-
-
-                        <>
-                            <h1 style={{ fontSize: 32 }}>{allDATA[0]?.emoji}</h1>
-
-                        </>
-                    }
-                </button>
-            </div>
-
-            <div className={styled.card}>
-
-            </div>
-
-
-
-            {/* {
-                allDATA.map((item) => (
-                    <span className={styled.EmojiPageIcon}>
-                        <button className={styled.EmojiButton}>
-                            {
-                                !item.emoji ?
-                                    <BsFillCameraFill className={styled.EmojiIcon} fill={"#333"} size={24} />
-                                    :
-                                    <>
-                                        <h1 style={{ fontSize: 24 }}>{item.emoji}</h1>
-                                    </>
-                            }
-                        </button>
-                    </span>
-                ))
-            } */}
-
-            {/* <span className={styled.EmojiPageIcon}>
-                <button className={styled.EmojiButton}>
-                    {
-                        !item.emoji ?
-                            <BsFillCameraFill className={styled.EmojiIcon} fill={"#333"} size={24} />
-                            :
-                            <>
-                                <h1 style={{ fontSize: 32 }}>{currentEmoji}</h1>
+        <>
+            {
+                mapData.map((item) => (
+                    <div key={item.id} className={styled.wallpaperContent} >
+                        <div className={styled.imageCollapse}>
+                            <img className={styled.image} alt="" src={item?.img} />
+                            <button className={styled.EmojiButton}>
                                 {
-                                    <span className={styled.spanTrash} onClick={spanTrashClicker}>
-                                        <BsFillTrashFill size={20} />
-                                    </span>
+                                    <>
+                                        <h1 style={{ fontSize: 32 }}>{item?.emoji}</h1>
+                                    </>
                                 }
-                            </>
-                    }
-                </button>
-            </span> */}
+                            </button>
+                        </div>
 
+                        <div className={styled.card}>
+                            <div className={styled.cardSection}>
 
-        </div>
+                                <div className={styled.title_Completed}>
+                                    <h2>{item?.input} Title</h2>
+                                    <span className={styled.completed} style={{
+                                        background: item.completed === false ? "#ef5777" : "#44cf03"
+                                    }}>
+                                        {
+                                            item.completed === false ? "Not Completed" : "Completed"
+                                        }
+                                    </span>
+                                </div>
+                                <textarea onChange={(e) => setTextAreaData(e.target.value)} placeholder='Görev Tanımı'>
+                                </textarea>
 
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </>
     )
-}
 
+
+
+}
 export default page

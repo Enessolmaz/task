@@ -1,9 +1,9 @@
 "use client"
 import Aside from "@/components/Aside/Aside";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Navbar from "@/components/Nav/Navbar";
 import { DataProvider } from "@/components/Context/Context";
+import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 

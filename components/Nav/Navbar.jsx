@@ -6,10 +6,8 @@ const Navbar = () => {
   return (
     <nav className={styled.navbar}>
       <div className={styled.navbarRight}>
-        <div className={styled.logo}>
-          {/* <img src="http://localhost:3000/_next/static/media/cvv.84ecd03a.png" width={32} height={32} /> */}
-        </div>
-        <div className={styled.userName}>RaidenX</div>
+        <button className={styled.navbarButton}>Login</button>
+        <button className={styled.navbarButton}>Register</button>
       </div>
     </nav>
   );

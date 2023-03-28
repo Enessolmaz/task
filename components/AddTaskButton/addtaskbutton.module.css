@@ -140,24 +140,18 @@
 .mainCard {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
-  height: 100px;
 }
 
 .card {
   display: flex;
-  flex: 1;
   gap: 10px;
   align-items: center;
-  min-height: 100px;
   padding: 10px;
-  width: 100%;
   border-radius: 0px 6px 6px 0px !important;
   cursor: pointer;
   transition: 200ms;
-  position: relative;
 }
 .card:hover {
   background: #23292e;
@@ -177,6 +171,10 @@
   position: relative;
 }
 
+.completed {
+  transition: 500ms ease in out;
+}
+
 .todoInfo {
   display: grid;
   gap: 15px;
@@ -187,6 +185,23 @@
   margin: 0 5px;
   padding: 3px 12px;
   border-radius: 12px;
+}
+
+.absolute {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 24px 8px;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+}
+
+.absolute .completed {
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-size: 12px;
 }
 
 .deleteICON {
@@ -200,6 +215,7 @@
   cursor: pointer;
   position: absolute;
   right: 5px;
+  bottom: 0;
   transition: 200ms;
 }
 
@@ -209,5 +225,3 @@
 .deleteICON:hover svg {
   fill: #ff6b8b;
 }
-
-

@@ -6,29 +6,29 @@ import { DataContext } from '@/components/Context/Context';
 import Link from 'next/link';
 
 
+
 const Todo = () => {
-
-    const [isPickerVisible, setPickerVisible] = useState(false)
-
-
     const { allDATA, setAllDATA } = useContext(DataContext)
+    const [completed, setCompleted] = useState(true)
 
     const deleteSelectedData = (selected) => {
-
         const newList = allDATA.filter((i) => i.id !== selected)
         setAllDATA(newList)
     }
-   
-    return (
 
+    const selectedCompleted = (selected) => {
+        selected.completed = completed
+        setCompleted(!completed)
+    }
+
+    return (
         <>
             {
-
                 allDATA?.map((item) => (
                     <div key={item?.id} className={styled.mainCard} style={{ borderLeft: `3px solid ${item?.color}`, borderRadius: "0px" }}>
-                        <Link realdata={item} href={`tasks/${item?.id}`} className={styled.card}>
+                        <Link href={`tasks/${item?.id}`} className={styled.card}>
                             <div className={styled.emojiButtonVisible}>
-                                <button onClick={() => setPickerVisible(!isPickerVisible)} className={styled.EmojiTodoButton}>
+                                <button className={styled.EmojiTodoButton}>
                                     {
                                         !item?.emoji ?
                                             <BsFillCameraFill className={styled.EmojiIcon} fill={"#333"} size={24} />
@@ -37,7 +37,6 @@ const Todo = () => {
                                     }
                                 </button>
                             </div>
-
                             <div className={styled.todoInfo}>
                                 <h3>{item?.input}</h3>
                                 <div>
@@ -53,44 +52,21 @@ const Todo = () => {
                                 </div>
                             </div>
                         </Link>
-                        <span className={styled.deleteICON} onClick={() => deleteSelectedData(item?.id)}>
-                            <AiTwotoneDelete size={24} fill={"#ef5777"} />
-                        </span>
+                        <div className={styled.absolute}>
+                            <span className={styled.completed}
+                                onClick={() => selectedCompleted(item)}
+                                style={{ transition: "300ms", cursor: "pointer", background: item.completed === false ? "#ef5777" : "#44cf03" }}>
+                                {item.completed === false ? "Not Completed" : "Completed"}
+                            </span>
+                            <span className={styled.deleteICON} onClick={() => deleteSelectedData(item?.id)}>
+                                <AiTwotoneDelete size={24} fill={"#ef5777"} />
+                            </span>
+                        </div>
+
 
                     </div>
                 ))
-
             }
-
-
-            {/* <div className={styled.card} style={{ borderLeft: "3px solid green", borderRadius: "0px" }}>
-                <div className={styled.emojiButtonVisible}>
-                    <button onClick={() => setPickerVisible(!isPickerVisible)} className={styled.EmojiTodoButton}>
-                        {
-                            !currentEmoji ?
-                                <BsFillCameraFill className={styled.EmojiIcon} fill={"#333"} size={24} />
-                                :
-                                <h1 style={{ fontSize: 32 }}>{currentEmoji}</h1>
-                        }
-                    </button>
-                </div>
-
-                <div className={styled.todoInfo}>
-                    <h3>Title</h3>
-                    <div>
-                        <span style={{ border: "1px solid rgb(64, 170, 90)" }}>
-                            Bitiş Tarihi
-                        </span>
-                        <span style={{ border: "1px solid #e03f2a" }}>
-                            Atamak
-                        </span>
-                        <span style={{ border: "1px solid rgb(64, 170, 90)" }}>
-                            Etiket
-                        </span>
-                    </div>
-                </div>
-            </div> */}
-
         </>
 
     )

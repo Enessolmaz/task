@@ -13,16 +13,16 @@ const menuItems = [
     logo: <FaTasks size={18} />,
     url: "/tasks",
   },
-  // {
-
-  //   logo: <AiOutlineProject size={18} />,
-  //   url: "/projects",
-  // },
-  // {
-
-  //   logo: <MdDisplaySettings size={18} />,
-  //   url: "/settings",
-  // },
+  {
+    name: "Projects",
+    logo: <AiOutlineProject size={18} />,
+    url: "/projects",
+  },
+  {
+    name: "Settings",
+    logo: <MdDisplaySettings size={18} />,
+    url: "/settings",
+  },
 ];
 
 export default menuItems;

@@ -11,6 +11,10 @@ const Aside = () => {
   const { getURL, setGetURL } = useContext(DataContext)
 
 
+  const data = false;
+
+
+
   useEffect(() => (
     setGetURL(router)
   ), [router])
@@ -21,8 +25,8 @@ const Aside = () => {
   return (
     <aside className={styled.aside}>
       <div className={styled.logo}>
-        <Link href="/" className={styled.thirteen}>
-          Todoist
+        <Link href="/" className={styled.buttonUI}>
+          taskAPP
         </Link>
       </div>
       <div className={styled.menuItems}>
@@ -40,7 +44,7 @@ const Aside = () => {
           </div>
         ))}
       </div>
-      <div></div>
+
     </aside>
   );
 };
