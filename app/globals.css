@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,7 +11,7 @@ body {
   color: #e2ebf8;
   background: radial-gradient(circle at 150% 0, #182b42 0, #111526 100%);
   line-height: 1.25;
-  font-family: "Inter", roboto;
+  font-family: "Inter";
 }
 
 a {
