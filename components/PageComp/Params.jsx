@@ -46,7 +46,7 @@ const PageComp = ({ paramsID }) => {
             />
 
             {
-                allDATA.map((item) => (
+                mapData.map((item) => (
                     <div key={item.id} className={styled.wallpaperContent} >
                         <div className={styled.imageCollapse}>
                             <img className={styled.image} alt="img" src={item.img} />
