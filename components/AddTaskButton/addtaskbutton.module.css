@@ -149,6 +149,7 @@
   gap: 10px;
   align-items: center;
   padding: 10px;
+  flex: 1;
   border-radius: 0px 6px 6px 0px !important;
   cursor: pointer;
   transition: 200ms;
@@ -172,30 +173,51 @@
 }
 
 .completed {
+  cursor: pointer;
   transition: 500ms ease in out;
+}
+.flex {
+  display: flex;
 }
 
 .todoInfo {
   display: grid;
   gap: 15px;
+  width: 0px;
+  position: absolute;
+  left: 100px;
+  top: 10px;
 }
-.todoInfo span {
+.todoInfo h3 {
+  width: max-content;
+  margin: 5px 0px 0px 5px;
+}
+
+.INFO {
+  display: flex;
+  width: max-content;
+  margin-top: 4px;
+}
+
+.INFO span {
   font-family: "Inter";
   font-size: 12px;
   margin: 0 5px;
-  padding: 3px 12px;
   border-radius: 12px;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .absolute {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 24px 8px;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  right: 0;
+  right: 20px;
+  top: 25px;
 }
 
 .absolute .completed {
@@ -208,20 +230,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto;
-  height: 46px;
-  width: 46px;
+  height: 36px;
+  width: 36px;
   border-radius: 50%;
   cursor: pointer;
   position: absolute;
-  right: 5px;
-  bottom: 0;
+  top: 100%;
+  margin-top: 5px;
   transition: 200ms;
 }
 
 .deleteICON:hover {
-  background: #212429;
+  background: #292d33;
 }
 .deleteICON:hover svg {
-  fill: #ff6b8b;
+  fill: #ff4970;
 }

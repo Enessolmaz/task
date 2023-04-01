@@ -8,8 +8,8 @@ import Link from 'next/link';
 
 
 const Todo = () => {
-    const { allDATA, setAllDATA } = useContext(DataContext)
-    const [completed, setCompleted] = useState(true)
+    const { allDATA, setAllDATA, localSTORAGE, setLocalSTORAGE } = useContext(DataContext)
+    const [completed, setCompleted] = useState(false)
 
     const deleteSelectedData = (selected) => {
         const newList = allDATA.filter((i) => i.id !== selected)
@@ -17,13 +17,13 @@ const Todo = () => {
     }
 
     const selectedCompleted = (selected) => {
-        selected.completed = completed
-        setCompleted(!completed)
+        setCompleted(selected.completed = !completed)
     }
 
     return (
         <>
             {
+
                 allDATA?.map((item) => (
                     <div key={item?.id} className={styled.mainCard} style={{ borderLeft: `3px solid ${item?.color}`, borderRadius: "0px" }}>
                         <Link href={`tasks/${item?.id}`} className={styled.card}>
@@ -37,25 +37,25 @@ const Todo = () => {
                                     }
                                 </button>
                             </div>
-                            <div className={styled.todoInfo}>
-                                <h3>{item?.input}</h3>
-                                <div>
-                                    <span style={{ border: `1px solid ${item?.color}` }}>
-                                        Bitiş Tarihi
-                                    </span>
-                                    <span style={{ border: `1px solid ${item?.color}` }}>
-                                        Atamak
-                                    </span>
-                                    <span style={{ border: `1px solid ${item?.color}` }}>
-                                        Etiket
-                                    </span>
-                                </div>
-                            </div>
                         </Link>
+                        <span className={styled.todoInfo}>
+                            <h3>{item?.input}</h3>
+                            <div className={styled.INFO}>
+                                <span style={{ border: `1px solid ${item?.color}` }}>
+                                    Tarih Ekle
+                                </span>
+                                <span style={{ border: `1px solid ${item?.color}` }}>
+                                    Atama Yap
+                                </span>
+                                <span style={{ border: `1px solid ${item?.color}` }}>
+                                    Etiket
+                                </span>
+                            </div>
+                        </span>
                         <div className={styled.absolute}>
                             <span className={styled.completed}
                                 onClick={() => selectedCompleted(item)}
-                                style={{ transition: "300ms", cursor: "pointer", background: item.completed === false ? "#ef5777" : "#44cf03" }}>
+                                style={{ transition: "300ms", background: item.completed === false ? "#ef5777" : "#44cf03" }}>
                                 {item.completed === false ? "Not Completed" : "Completed"}
                             </span>
                             <span className={styled.deleteICON} onClick={() => deleteSelectedData(item?.id)}>

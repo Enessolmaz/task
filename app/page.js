@@ -1,9 +1,9 @@
 import Main from "@/components/Main/Main";
 
 
-export default function Home({params}) {
+export default function Home() {
 
-  console.log(params)
+
 
   return (
     <div>

@@ -23,10 +23,6 @@
   color: white !important;
 }
 
-.thirteen {
-  filter: drop-shadow(0 0 5px #f2f5f7);
-  letter-spacing: 1px;
-}
 
 .menuItems {
   display: flex;

@@ -17,6 +17,8 @@ import { DataContext } from "../Context/Context";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     "& .MuiDialogContent-root": {
         padding: theme.spacing(2),
@@ -91,6 +93,8 @@ const AddTaskButton = () => {
     const closeDialog = () => {
         setOpen(false);
     }
+
+
 
     return (
         <>

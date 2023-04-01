@@ -9,6 +9,7 @@ body {
   color: #e2ebf8;
   background: radial-gradient(circle at 150% 0, #182b42 0, #111526 100%);
   line-height: 1.25;
+  font-family: "Inter", roboto;
 }
 
 a {
@@ -41,17 +42,9 @@ a {
 }
 
 .css-uhb5lp {
-  width: 400px !important;
-  min-height: 400px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  padding: 0 35px !important;
-  justify-content: space-evenly !important;
-  text-align: center !important;
-  border-radius: 32px !important;
   background: #212429 !important;
 }
 
 .css-1ujsas3 {
-  color: #fff !important;
+  color: #fff;
 }

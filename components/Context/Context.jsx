@@ -1,9 +1,13 @@
 "use client"
 import { createContext, useEffect, useRef, useState } from "react";
 import autoAnimate from '@formkit/auto-animate'
-import image1 from "../../app/tasks/[...id]/images/wp1.jpg"
-import image2 from "../../app/tasks/[...id]/images/wp2.jpg"
-import image3 from "../../app/tasks/[...id]/images/wp3.jpg"
+import image4 from "../../app/tasks/[...id]/images/wp4.png"
+import image5 from "../../app/tasks/[...id]/images/wp5.png"
+import image6 from "../../app/tasks/[...id]/images/wp6.jpg"
+import image7 from "../../app/tasks/[...id]/images/wp7.jpg"
+import image8 from "../../app/tasks/[...id]/images/wp8.png"
+
+
 
 const DataContext = createContext();
 
@@ -17,17 +21,25 @@ const DataProvider = ({ children }) => {
     const [allDATA, setAllDATA] = useState([]);
     const [getURL, setGetURL] = useState("");
     const [completed, setCompleted] = useState(false);
+    const [save, setSave] = useState(false);
+    const [localSTORAGE, setLocalSTORAGE] = useState();
     const parent = useRef(null)
 
     const backgroundIMAGES = [
         {
-            image: image1.src
+            image: image4.src
         },
         {
-            image: image2.src
+            image: image5.src
         },
         {
-            image: image3.src
+            image: image6.src
+        },
+        {
+            image: image7.src
+        },
+        {
+            image: image8.src
         },
     ]
 
@@ -36,14 +48,15 @@ const DataProvider = ({ children }) => {
         color: colorData,
         emoji: emojiPickerData,
         input: inputData,
-        id: Math.floor(Math.random() * 231432531) - allDATA.length,
+        id: Math.floor(Math.random() * 1234567890) - allDATA.length,
         img: backgroundIMAGES[Math.floor(Math.random() * backgroundIMAGES.length)].image,
-        completed: completed
+        completed: completed,
+        textarea: "",
+        save: save,
     }
     useEffect(() => {
         parent.current && autoAnimate(parent.current)
     }, [parent])
-
 
 
     const data = {
@@ -59,6 +72,10 @@ const DataProvider = ({ children }) => {
         getURL,
         completed,
         setCompleted,
+        setLocalSTORAGE,
+        localSTORAGE,
+        setSave,
+        save
     }
 
 
