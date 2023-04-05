@@ -7,7 +7,6 @@
   flex: 1;
   height: 400px;
   padding: 20px;
-  font-family: "Inter";
 }
 
 .technologies {
@@ -50,7 +49,6 @@
 
 .Context {
   background-color: #10a5cec0;
-  color: ba;
 }
 .animate {
   background-color: #57ef5f8c;
