@@ -43,6 +43,14 @@ a {
 
 .css-uhb5lp {
   background: #212429 !important;
+  width: 400px !important;
+  min-height: 400px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 35px !important;
+  justify-content: space-evenly !important;
+  text-align: center !important;
+  border-radius: 32px !important;
 }
 
 .css-1ujsas3 {
@@ -119,6 +127,15 @@ a {
   border-radius: 4px important;
   color: white !important;
 }
+
+.css-9iedg7 {
+  text-align: start !important;
+  padding: 0 !important;
+  width: max-content !important;
+  height: 20px !important;
+  border-radius: 4px important;
+  color: white !important;
+}
 .css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
   background-color: #111526 !important;
 }
@@ -131,6 +148,20 @@ a {
   ) !important;
   color: #fff !important;
   font-family: "Inter" !important;
+}
+
+.css-r8u8y9 {
+  background: radial-gradient(
+    circle at 150% 0,
+    #182b42 0,
+    #111526 100%
+  ) !important;
+  color: #fff !important;
+  font-family: "Inter" !important;
+}
+
+.css-r8u8y9 li:hover {
+  background-color: rgb(23, 95, 89) !important;
 }
 
 .css-6hp17o-MuiList-root-MuiMenu-list li:hover {
