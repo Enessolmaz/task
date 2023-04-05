@@ -4,16 +4,17 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styled from "./params.module.css"
+import { useRouter } from 'next/navigation';
 
 
 
 const PageComp = ({ paramsID }) => {
-    const { allDATA, setAllDATA } = useContext(DataContext)
+    const { allDATA } = useContext(DataContext)
     const mapData = allDATA.filter((item) => item.id.toString() === paramsID)
     const [textAreaState, setTextAreaState] = useState("");
     const successNotify = (description) => toast.success(description);
     const errNotify = (description) => toast.error(description);
-
+    const router = useRouter()
 
     const addLOCALSTORAGE = (value) => {
         if (!textAreaState.trim()) {
@@ -23,13 +24,14 @@ const PageComp = ({ paramsID }) => {
             successNotify("Kaydedildi")
             mapData.find((item) => item.id.toString() === value.id.toString()).textarea = textAreaState
             mapData.find((item) => item.id.toString() === value.id.toString()).save = true
+            setTimeout(() => router.push('/tasks'), 2000);
         }
     }
 
     useEffect(() => (
         setTextAreaState(mapData.find((item) => item.id.toString() === paramsID)?.textarea)
-
     ), [allDATA])
+
 
 
     return (

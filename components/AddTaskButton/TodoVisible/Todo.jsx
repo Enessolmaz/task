@@ -4,12 +4,15 @@ import { AiTwotoneDelete } from "react-icons/ai"
 import styled from "../addtaskbutton.module.css";
 import { DataContext } from '@/components/Context/Context';
 import Link from 'next/link';
-
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { AiFillTag, AiOutlineUserAdd, AiOutlineHistory } from "react-icons/ai"
+import InfoSkill from './InfoSkill';
 
 const Todo = () => {
-    const { allDATA, setAllDATA, localSTORAGE, setLocalSTORAGE } = useContext(DataContext)
+    const { allDATA, setAllDATA } = useContext(DataContext)
     const [completed, setCompleted] = useState(false)
+    const [startDate, setStartDate] = useState();
 
     const deleteSelectedData = (selected) => {
         const newList = allDATA.filter((i) => i.id !== selected)
@@ -20,8 +23,16 @@ const Todo = () => {
         setCompleted(selected.completed = !completed)
     }
 
+
+    const dateFunction = (date, itemID) => {
+        setStartDate(allDATA.find((item) => item.id.toString() === itemID.toString()).date = date)
+    }
+
+
+
     return (
         <>
+
             {
 
                 allDATA?.map((item) => (
@@ -41,17 +52,26 @@ const Todo = () => {
                         <span className={styled.todoInfo}>
                             <h3>{item?.input}</h3>
                             <div className={styled.INFO}>
-                                <span style={{ border: `1px solid ${item?.color}` }}>
-                                    Tarih Ekle
+                                <span className={styled.infoSpan} style={{
+                                    border: `1px solid ${item?.color}`
+                                }}
+                                >
+
+                                    <span>
+                                        <AiOutlineHistory fill={item?.color} size={14} style={{ marginTop: 2 }} />
+                                    </span>
+
+                                    &nbsp;
+                                    <DatePicker
+                                        style={{ color: "#fff" }}
+                                        placeholderText="Tarih Ata"
+                                        selected={item.date} onChange={(date) => dateFunction(date, item.id)} />
                                 </span>
-                                <span style={{ border: `1px solid ${item?.color}` }}>
-                                    Atama Yap
-                                </span>
-                                <span style={{ border: `1px solid ${item?.color}` }}>
-                                    Etiket
-                                </span>
+                                <InfoSkill item={item} />
                             </div>
-                        </span>
+
+
+                        </span >
                         <div className={styled.absolute}>
                             <span className={styled.completed}
                                 onClick={() => selectedCompleted(item)}
@@ -64,7 +84,7 @@ const Todo = () => {
                         </div>
 
 
-                    </div>
+                    </div >
                 ))
             }
         </>

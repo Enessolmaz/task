@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,7 +9,7 @@ body {
   color: #e2ebf8;
   background: radial-gradient(circle at 150% 0, #182b42 0, #111526 100%);
   line-height: 1.25;
-  font-family: "Inter";
+  font-family: "Inter", roboto;
 }
 
 a {
@@ -38,23 +36,99 @@ a {
   display: flex !important;
   flex-direction: column !important;
   padding: 0 35px !important;
-  justify-content: space-between !important;
+  justify-content: space-evenly !important;
   text-align: center !important;
   border-radius: 32px !important;
 }
 
 .css-uhb5lp {
   background: #212429 !important;
-  width: 400px !important;
-  min-height: 400px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  padding: 0 35px !important;
-  justify-content: space-evenly !important;
-  text-align: center !important;
-  border-radius: 32px !important;
 }
 
 .css-1ujsas3 {
   color: #fff;
+}
+
+.react-datepicker {
+  border: none !important;
+  color: #fff !important;
+  font-family: "Inter" !important;
+}
+
+.react-datepicker__header {
+  background: radial-gradient(circle at 150% 0, #182b42 0, #111526 100%);
+  color: #fff !important;
+  border: none !important;
+  font-family: "Inter" !important;
+}
+.react-datepicker__current-month {
+  color: #fff !important;
+  font-family: "Inter" !important;
+}
+
+.react-datepicker__month-container {
+  background: radial-gradient(circle at 150% 0, #182b42 0, #111526 100%);
+  color: #fff !important;
+  font-family: "Inter" !important;
+}
+
+.react-datepicker__week {
+  color: #fff !important;
+  font-family: "Inter" !important;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+  color: white !important;
+}
+
+.react-datepicker__day:hover,
+.react-datepicker__month-text:hover,
+.react-datepicker__quarter-text:hover,
+.react-datepicker__year-text:hover {
+  color: black !important;
+}
+
+.css-18mjx21-MuiFormControl-root {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+}
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+  color: white !important;
+  margin-left: auto !important;
+}
+.css-bpeome-MuiSvgIcon-root-MuiSelect-icon {
+  color: white !important;
+  margin-left: auto !important;
+}
+
+.css-w66kx-MuiChip-root {
+  text-align: start;
+  padding: 0 !important;
+  width: max-content;
+  height: 20px;
+  border-radius: 4px important;
+  color: white !important;
+}
+.css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper{
+  background-color: #111526;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  background: radial-gradient(circle at 150% 0, #182b42 0, #111526 100%);
+  color: #fff !important;
+  font-family: "Inter";
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list li:hover{
+  background-color: rgb(23, 95, 89);
 }

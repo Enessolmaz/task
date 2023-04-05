@@ -115,7 +115,7 @@ const AddTaskButton = () => {
             <Button className={styles.addTaskButton} onClick={handleClickOpen}>
                 Yeni Dosya
             </Button>
-            <BootstrapDialog onClose={handleClose} open={open}>
+            <BootstrapDialog className={style.popUpDialog} onClose={handleClose} open={open}>
                 <BootstrapDialogTitle
                     onClose={closeDialog}
                     sx={{ background: "#212429", border: "none", color: "white" }}

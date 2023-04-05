@@ -8,6 +8,14 @@
   font-family: "Inter";
 }
 
+.popUpDialog {
+  display: flex;
+  flex-direction: column;
+  padding: 0 35px;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 32px;
+}
 
 .contentPopUp > h3 {
   color: rgb(189, 189, 189);
@@ -124,7 +132,6 @@
   transition: 300ms;
   border-radius: 12px;
   cursor: pointer;
-  margin-bottom: 10px;
 }
 .dialogAddButton:hover {
   transform: scale(1.1);
@@ -192,15 +199,33 @@
   margin-top: 4px;
 }
 
-.INFO span {
+.INFO .infoSpan {
   font-family: "Inter";
   font-size: 12px;
-  margin: 0 5px;
-  border-radius: 12px;
-  padding: 5px 8px;
+  margin: 0 4px;
+  border-radius: 8px;
+  padding: 4px 8px;
+  height: 32px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: max-content;
+}
+
+.INFO span input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: "Inter";
+  cursor: pointer;
+  width: 75px;
+  font-size: 12px;
+}
+
+.INFO span input::placeholder{
+  color: #fff;
 }
 
 .absolute {
@@ -229,7 +254,7 @@
   cursor: pointer;
   position: absolute;
   top: 100%;
-  margin-top: 5px;
+  margin-top: 6px;
   transition: 200ms;
 }
 
@@ -239,3 +264,4 @@
 .deleteICON:hover svg {
   fill: #ff4970;
 }
+

@@ -23,6 +23,7 @@ const DataProvider = ({ children }) => {
     const [completed, setCompleted] = useState(false);
     const [save, setSave] = useState(false);
     const [localSTORAGE, setLocalSTORAGE] = useState();
+    const [dataStatus, setDataStatus] = useState([])
     const parent = useRef(null)
 
     const backgroundIMAGES = [
@@ -53,6 +54,8 @@ const DataProvider = ({ children }) => {
         completed: completed,
         textarea: "",
         save: save,
+        date: null,
+        status: [],
     }
     useEffect(() => {
         parent.current && autoAnimate(parent.current)
@@ -75,7 +78,9 @@ const DataProvider = ({ children }) => {
         setLocalSTORAGE,
         localSTORAGE,
         setSave,
-        save
+        save,
+        dataStatus,
+        setDataStatus
     }
 
 
