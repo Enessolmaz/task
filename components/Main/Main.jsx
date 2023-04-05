@@ -8,13 +8,6 @@ const Main = () => {
 
   return (
     <div className={styled.card}>
-
-      Yarın date picker yap
-      <br />
-      Atama ve Etiket kısımlarını yap
-      <br />
-      Local Storage kısmını yap
-
       <h3>Proje NextJS'i anlamak için geliştirilmiştir.</h3>
       <br />
       Projede Kullanılan teknolojiler.

@@ -104,12 +104,26 @@ a {
   cursor: pointer !important;
 }
 
+.css-1si2chx {
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+}
+
 .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
   display: flex !important;
   align-items: center !important;
   cursor: pointer !important;
   flex: 1 !important;
 }
+
+.css-qiwgdb.css-qiwgdb.css-qiwgdb {
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  flex: 1 !important;
+}
+
 .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
   color: white !important;
   margin-left: auto !important;
@@ -136,6 +150,7 @@ a {
   border-radius: 4px important;
   color: white !important;
 }
+
 .css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
   background-color: #111526 !important;
 }
