@@ -141,10 +141,15 @@ a {
   border-radius: 4px important;
   color: white !important;
 }
-
+.css-yi3mkw{
+  display: flex !important;
+  align-items: center !important;
+}
+.css-1kqsah9{
+  height: 20px !important;
+}
 .css-9iedg7 {
   text-align: start !important;
-  padding: 0 !important;
   width: max-content !important;
   height: 20px !important;
   border-radius: 4px important;
