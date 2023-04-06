@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 
 const PageComp = ({ paramsID }) => {
-    const { allDATA } = useContext(DataContext)
+    const { allDATA, setAllDATA } = useContext(DataContext)
     const mapData = allDATA.filter((item) => item.id.toString() === paramsID)
     const [textAreaState, setTextAreaState] = useState("");
     const successNotify = (description) => toast.success(description);
@@ -24,14 +24,18 @@ const PageComp = ({ paramsID }) => {
             successNotify("Kaydedildi")
             mapData.find((item) => item.id.toString() === value.id.toString()).textarea = textAreaState
             mapData.find((item) => item.id.toString() === value.id.toString()).save = true
+            localStorage.setItem('data', JSON.stringify(allDATA));
             setTimeout(() => router.push('/tasks'), 2000);
         }
     }
 
-    useEffect(() => (
+    useEffect(() => {
         setTextAreaState(mapData.find((item) => item.id.toString() === paramsID)?.textarea)
-    ), [allDATA])
-
+        const items = JSON.parse(localStorage.getItem('items'));
+        if (items) {
+            setAllDATA(items);
+        }
+    }, []);
 
 
     return (
@@ -88,6 +92,8 @@ const PageComp = ({ paramsID }) => {
                                     defaultValue={item.textarea}
                                     onChange={(e) => setTextAreaState(e.target.value)}
                                     placeholder='Görev Tanımı' />
+
+
                             </div>
                             <button onClick={() => addLOCALSTORAGE(item)} className={styled.button}>Kaydet</button>
                         </div>

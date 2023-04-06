@@ -22,7 +22,7 @@ const DataProvider = ({ children }) => {
     const [getURL, setGetURL] = useState("");
     const [completed, setCompleted] = useState(false);
     const [save, setSave] = useState(false);
-    const [localSTORAGE, setLocalSTORAGE] = useState();
+    const [localSTORAGE, setLocalSTORAGE] = useState([]);
     const [dataStatus, setDataStatus] = useState([])
     const parent = useRef(null)
 

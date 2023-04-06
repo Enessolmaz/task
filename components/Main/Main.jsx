@@ -33,6 +33,9 @@ const Main = () => {
         <span className={styled.animate}>
           Auto-animate
         </span>
+        <span className={styled.Toastify}>
+          Local Storage
+        </span>
       </div>
     </div>
   )

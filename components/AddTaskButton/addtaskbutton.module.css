@@ -154,6 +154,16 @@
   cursor: pointer;
   transition: 200ms;
 }
+
+.local {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin: 0 auto;
+  margin-bottom: 42px;
+  
+}
+
 .card:hover {
   background: #23292e;
 }
@@ -196,7 +206,7 @@
 .INFO {
   display: flex;
   width: max-content;
-  margin-top: 4px;
+  margin-top: -5px;
 }
 
 .INFO .infoSpan {
@@ -224,7 +234,7 @@
   font-size: 12px;
 }
 
-.INFO span input::placeholder{
+.INFO span input::placeholder {
   color: #fff;
 }
 
@@ -235,7 +245,7 @@
   justify-content: center;
   position: absolute;
   right: 20px;
-  top: 25px;
+  top: 15px;
 }
 
 .absolute .completed {
@@ -264,4 +274,3 @@
 .deleteICON:hover svg {
   fill: #ff4970;
 }
-

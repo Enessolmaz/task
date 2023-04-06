@@ -1,4 +1,4 @@
-import React, { useContext} from 'react'
+import React, { useContext } from 'react'
 import styled from "../addtaskbutton.module.css";
 import { AiFillTag } from "react-icons/ai"
 import Box from '@mui/material/Box';
@@ -36,7 +36,7 @@ const InfoSkill = ({ item }) => {
 
                 <span style={{ position: "relative", left: 15 }}>
                     {
-                        item.status.length === 0 ? "Durum" : null
+                        item?.status?.length === 0 ? "Durum" : null
                     }
                 </span>
                 <FormControl sx={{ m: 1, cursor: "pointer", width: "max-content" }}>
@@ -47,7 +47,7 @@ const InfoSkill = ({ item }) => {
                         // onChange={handleChange}
                         onChange={(e) => handleFunction(e.target.value)}
                         multiple
-                        value={item.status}
+                        value={item?.status}
                         renderValue={() => {
                             return (
                                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, }}>
